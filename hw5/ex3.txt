@@ -1,0 +1,5113 @@
+Variables: 
+i j 
+
+** Nodes **
+14: skip
+15: skip
+16:  i := 0
+17:  j := 0
+18: skip
+19: skip
+20: assume i <= 9
+21: assume !(i <= 9)
+22: skip
+23: skip
+24:  i := i + 1
+25:  j := j + 1
+26: assert i == j
+
+** Edges **
+14 -> 16
+16 -> 17
+17 -> 18
+18 -> 20
+18 -> 21
+19 -> 26
+20 -> 22
+21 -> 19
+22 -> 24
+23 -> 18
+24 -> 25
+25 -> 23
+26 -> 15
+Nodes: 
+14: skip 16:  i := 0 17:  j := 0 18: skip 20: assume i <= 9 22: skip 24:  i := i + 1 25:  j := j + 1 23: skip 21: assume !(i <= 9) 19: skip 26: assert i == j 15: skip 
+
+
+
+
+Node: 14: skip
+
+Node: 15: skip
+Parents: 26: assert i == j
+
+Node: 16:  i := 0
+Parents: 14: skip
+
+Node: 17:  j := 0
+Parents: 16:  i := 0
+
+Node: 18: skip
+Parents: 17:  j := 0
+Parents: 23: skip
+
+Node: 19: skip
+Parents: 21: assume !(i <= 9)
+
+Node: 20: assume i <= 9
+Parents: 18: skip
+
+Node: 21: assume !(i <= 9)
+Parents: 18: skip
+
+Node: 22: skip
+Parents: 20: assume i <= 9
+
+Node: 23: skip
+Parents: 25:  j := j + 1
+
+Node: 24:  i := i + 1
+Parents: 22: skip
+
+Node: 25:  j := j + 1
+Parents: 24:  i := i + 1
+
+Node: 26: assert i == j
+Parents: 19: skip
+
+
+
+
+14: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+17:  j := 0
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+18: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+--------------------WIDENING---------------------
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+17:  j := 0
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+18: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 16:  i := 0 
+
+Joined Matrix: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+
+Processed Matrix: 
+0   0   INF 
+0   INF INF 
+INF INF 0   
+
+
+Normalized Matrix: 
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+17:  j := 0
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+18: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 17:  j := 0 
+
+Joined Matrix: 
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+
+Processed Matrix: 
+0   0   0   
+0   0   INF 
+0   INF INF 
+
+
+Normalized Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 18: skip 
+
+Nodes: 
+23: skip 17:  j := 0 
+
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+WIDENED MATRIX: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 20: assume i <= 9 
+
+Joined Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+0 9 Processed Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 22: skip 
+
+Nodes: 
+20: assume i <= 9 
+
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 24:  i := i + 1 
+
+Joined Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix1: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix2: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 25:  j := j + 1 
+
+Joined Matrix: 
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix1: 
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix2: 
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+
+Normalized Matrix: 
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 23: skip 
+
+Nodes: 
+25:  j := j + 1 
+
+0   1   1   
+-1   0   0   
+-1   0   0   
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 21: assume !(i <= 9) 
+
+Joined Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+NOT PROCESS
+HERERERERE!
+0 9 Processed Matrix: 
+0   0   0   
+-10   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 19: skip 
+
+Nodes: 
+21: assume !(i <= 9) 
+
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 26: assert i == j 
+
+----------------------------
+NODE: 15: skip 
+
+Nodes: 
+26: assert i == j 
+
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 18: skip 
+
+Nodes: 
+23: skip 17:  j := 0 
+
+0   1   1   
+-1   0   0   
+-1   0   0   
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   1   1   
+0   0   0   
+0   0   0   
+
+WIDENED MATRIX: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   0   0   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 20: assume i <= 9 
+
+Joined Matrix: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+
+Processed Matrix: 
+0   9   INF 
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   0   0   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 22: skip 
+
+Nodes: 
+20: assume i <= 9 
+
+0   9   9   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   1   0   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 24:  i := i + 1 
+
+Joined Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix1: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix2: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 25:  j := j + 1 
+
+Joined Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix1: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix2: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 23: skip 
+
+Nodes: 
+25:  j := j + 1 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+ORIGIN MATRIX: 
+0   1   1   
+-1   0   0   
+-1   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 21: assume !(i <= 9) 
+
+Joined Matrix: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+
+NOT PROCESS
+HERERERERE!
+0 9 Processed Matrix: 
+0   INF INF 
+-10   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Changed!! 
+----------------------------
+NODE: 19: skip 
+
+Nodes: 
+21: assume !(i <= 9) 
+
+0   INF INF 
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   -40   -70   
+-50   0   -80   
+-70   -70   0   
+
+Joined MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 26: assert i == j 
+
+----------------------------
+NODE: 15: skip 
+
+Nodes: 
+26: assert i == j 
+
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 18: skip 
+
+Nodes: 
+23: skip 17:  j := 0 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+WIDENED MATRIX: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Not Changed -> FIXED 
+----------------------------
+NODE: 20: assume i <= 9 
+
+Joined Matrix: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+
+Processed Matrix: 
+0   9   INF 
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Not Changed 
+----------------------------
+NODE: 22: skip 
+
+Nodes: 
+20: assume i <= 9 
+
+0   9   9   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 24:  i := i + 1 
+
+Joined Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix1: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix2: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Not Changed 
+----------------------------
+NODE: 25:  j := j + 1 
+
+Joined Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix1: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix2: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Not Changed 
+----------------------------
+NODE: 23: skip 
+
+Nodes: 
+25:  j := j + 1 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+ORIGIN MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 21: assume !(i <= 9) 
+
+Joined Matrix: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+
+NOT PROCESS
+HERERERERE!
+0 9 Processed Matrix: 
+0   INF INF 
+-10   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Not Changed 
+----------------------------
+NODE: 19: skip 
+
+Nodes: 
+21: assume !(i <= 9) 
+
+0   INF INF 
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Joined MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+----------------------------
+NODE: 26: assert i == j 
+
+Joined Matrix: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+
+Processed Matrix: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+
+----------------------------
+NODE: 15: skip 
+
+Nodes: 
+26: assert i == j 
+
+0   INF INF 
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+BOT BOT BOT 
+BOT BOT BOT 
+BOT BOT BOT 
+
+Joined MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+-----------------WIDENING FINISH-----------------
+--------------------NARROWING--------------------
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 16:  i := 0 
+
+Joined Matrix: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+
+Processed Matrix: 
+0   0   INF 
+0   INF INF 
+INF INF 0   
+
+
+Normalized Matrix: 
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 17:  j := 0 
+
+Joined Matrix: 
+0   0   INF 
+0   0   INF 
+INF INF 0   
+
+
+Processed Matrix: 
+0   0   0   
+0   0   INF 
+0   INF INF 
+
+
+Normalized Matrix: 
+0   0   0   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   INF INF 
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 18: skip 
+
+Nodes: 
+23: skip 17:  j := 0 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+NARROWED MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Changed!! 
+----------------------------
+NODE: 20: assume i <= 9 
+
+Joined Matrix: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+
+10 9 Processed Matrix: 
+0   9   10   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Changed!! 
+----------------------------
+NODE: 22: skip 
+
+Nodes: 
+20: assume i <= 9 
+
+0   9   9   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 24:  i := i + 1 
+
+Joined Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix1: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix2: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Changed!! 
+----------------------------
+NODE: 25:  j := j + 1 
+
+Joined Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix1: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix2: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Changed!! 
+----------------------------
+NODE: 23: skip 
+
+Nodes: 
+25:  j := j + 1 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+ORIGIN MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 21: assume !(i <= 9) 
+
+Joined Matrix: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+
+NOT PROCESS
+HERERERERE!
+0 9 Processed Matrix: 
+0   10   10   
+-10   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Changed!! 
+----------------------------
+NODE: 19: skip 
+
+Nodes: 
+21: assume !(i <= 9) 
+
+0   10   10   
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 26: assert i == j 
+
+----------------------------
+NODE: 15: skip 
+
+Nodes: 
+26: assert i == j 
+
+0   INF INF 
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Joined MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF INF INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 18: skip 
+
+Nodes: 
+23: skip 17:  j := 0 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+0   0   0   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+NARROWED MATRIX: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Not Changed -> FIXED 
+----------------------------
+NODE: 20: assume i <= 9 
+
+Joined Matrix: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+
+10 9 Processed Matrix: 
+0   9   10   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Not Changed 
+----------------------------
+NODE: 22: skip 
+
+Nodes: 
+20: assume i <= 9 
+
+0   9   9   
+0   0   0   
+0   0   0   
+ORIGIN MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+Joined MATRIX: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 24:  i := i + 1 
+
+Joined Matrix: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix1: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Processed Matrix2: 
+0   9   9   
+0   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Not Changed 
+----------------------------
+NODE: 25:  j := j + 1 
+
+Joined Matrix: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix1: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Processed Matrix2: 
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Not Changed 
+----------------------------
+NODE: 23: skip 
+
+Nodes: 
+25:  j := j + 1 
+
+0   10   10   
+-1   0   0   
+-1   0   0   
+ORIGIN MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 21: assume !(i <= 9) 
+
+Joined Matrix: 
+0   10   10   
+0   0   0   
+0   0   0   
+
+
+NOT PROCESS
+HERERERERE!
+0 9 Processed Matrix: 
+0   10   10   
+-10   0   0   
+0   0   0   
+
+
+Normalized Matrix: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Not Changed 
+----------------------------
+NODE: 19: skip 
+
+Nodes: 
+21: assume !(i <= 9) 
+
+0   10   10   
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 26: assert i == j 
+
+Joined Matrix: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+
+10 10 Processed Matrix: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+
+----------------------------
+NODE: 15: skip 
+
+Nodes: 
+26: assert i == j 
+
+0   10   10   
+-10   0   0   
+-10   0   0   
+ORIGIN MATRIX: 
+0   INF INF 
+-10   0   0   
+-10   0   0   
+
+Joined MATRIX: 
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+----------------------------
+NODE: 14: skip 
+
+Nodes: 
+
+
+ORIGIN MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+Joined MATRIX: 
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+----MATRIX MAP: 
+14: skip
+0   INF INF 
+INF 0   INF 
+INF INF 0   
+
+15: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+16:  i := 0
+0   0   INF 
+0   0   INF 
+INF INF INF 
+
+17:  j := 0
+0   0   0   
+0   0   0   
+0   0   0   
+
+18: skip
+0   10   10   
+0   0   0   
+0   0   0   
+
+19: skip
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+20: assume i <= 9
+0   9   9   
+0   0   0   
+0   0   0   
+
+21: assume !(i <= 9)
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+22: skip
+0   9   9   
+0   0   0   
+0   0   0   
+
+23: skip
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+24:  i := i + 1
+0   10   9   
+-1   0   -1   
+0   1   0   
+
+25:  j := j + 1
+0   10   10   
+-1   0   0   
+-1   0   0   
+
+26: assert i == j
+0   10   10   
+-10   0   0   
+-10   0   0   
+
+-----------------NARROWING FINISH----------------
+
+
+

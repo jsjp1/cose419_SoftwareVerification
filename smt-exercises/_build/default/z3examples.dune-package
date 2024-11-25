@@ -1,0 +1,4 @@
+(lang dune 3.14)
+(name z3examples)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package)) (bin (z3examples)))

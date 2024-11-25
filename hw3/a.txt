@@ -1,0 +1,53 @@
+1: f(x, y) = x + y
+def f(i1,i2): 
+  o1 := add(i2,i1)
+  return o1
+
+Verification result: true
+-----
+
+2: f(x) = x^8
+def f(i1): 
+  o2 := mul(i1,i1)
+  o3 := mul(o2,o2)
+  o1 := mul(o3,o3)
+  return o1
+
+Verification result: true
+-----
+
+3: f(a,b,c,h) = a * b^h + b * h + c
+def f(i1,i2,i3,i4): 
+  o2 := mul(i3,i1)
+  o4 := add(i4,i4)
+  o1 := mul(o2,o4)
+  o3 := add(o1,i3)
+  return o3
+
+Verification result: true
+-----
+
+4: f(x) = x^31
+def f(i1): 
+  o2 := mul(i1,i1)
+  o5 := mul(i1,o2)
+  o6 := mul(o2,o5)
+  o1 := mul(o5,o6)
+  o4 := mul(o1,o6)
+  o7 := mul(o4,o4)
+  o3 := mul(o6,o7)
+  return o3
+
+Verification result: true
+-----
+
+5: f(x) = (2*(x-1))^2
+def f(i1): 
+  o2 := sub1(i1)
+  o3 := mul2(o2)
+  o1 := mul(o3,o3)
+  return o1
+
+Verification result: true
+-----
+

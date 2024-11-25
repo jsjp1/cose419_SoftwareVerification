@@ -1,0 +1,7 @@
+lib: [
+  "_build/install/default/lib/z3examples/META"
+  "_build/install/default/lib/z3examples/dune-package"
+]
+bin: [
+  "_build/install/default/bin/z3examples"
+]

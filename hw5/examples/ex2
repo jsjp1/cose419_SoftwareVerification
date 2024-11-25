@@ -1,0 +1,10 @@
+var i, j;
+{
+i:= 0;
+j:= 9;
+  while (i <= j)
+  {
+  i:= i + 1;
+  }
+  assert(j + 1 <= i);
+}
